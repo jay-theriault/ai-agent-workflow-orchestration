@@ -150,3 +150,120 @@ With sufficient data, we could:
 5. Detect patterns (certain tasks slower at specific times, correlation between tasks)
 
 A robust scheduler would use these statistics to make probabilistic decisions. This moves from deterministic scheduling toward stochastic optimization, better matching real-world behavior.
+## Demo: test_demo.py Showcase
+
+The `test_demo.py` script builds the example DAG and runs it with several
+scheduling strategies. Running the script prints the DAG structure and a
+performance comparison of sequential versus parallel execution.
+
+```bash
+python3 test_demo.py
+```
+
+Sample output:
+
+```
+Creating example DAG...
+
+=== DAG Structure ===
+Total tasks: 17
+
+Short tasks (1s each): S1, S2, S3, S4
+Medium tasks (5s each): M1, M2, M3, M4, M5, M6, M7, M8
+Critical path: Gate → C1 → C2 → C3 → End
+
+Theoretical minimum time (critical path): 51.0s
+Sequential worst case: ~95.0s
+
+==================================================
+Testing: Sequential_Execution_1_Worker
+==================================================
+Workers: 1
+
+Execution time: 95.14 seconds
+Completed tasks: 17/17
+Critical path identified: S1 → Gate → C1 → C2 → C3 → End
+Critical path length: 52.0s
+
+Worker utilization:
+  worker_0_utilization: 100.0%
+
+==================================================
+Testing: Sequential_Execution_4_Workers
+==================================================
+Workers: 4
+
+Execution time: 72.08 seconds
+Completed tasks: 17/17
+Critical path identified: S1 → Gate → C1 → C2 → C3 → End
+Critical path length: 52.0s
+
+Worker utilization:
+  worker_0_utilization: 100.0%
+  worker_1_utilization: 86.1%
+  worker_2_utilization: 86.1%
+  worker_3_utilization: 86.1%
+
+==================================================
+Testing: Optimized_Execution_4_Workers
+==================================================
+Workers: 4
+
+Execution time: 52.48 seconds
+Completed tasks: 17/17
+Critical path identified: S1 → Gate → C1 → C2 → C3 → End
+Critical path length: 52.0s
+
+Worker utilization:
+  worker_0_utilization: 99.2%
+  worker_1_utilization: 30.6%
+  worker_2_utilization: 30.6%
+  worker_3_utilization: 21.0%
+
+==================================================
+Testing: Parallel_Execution_Unlimited_Workers
+==================================================
+Workers: Unlimited
+
+Execution time: 52.04 seconds
+Completed tasks: 17/17
+Critical path identified: S1 → Gate → C1 → C2 → C3 → End
+Critical path length: 52.0s
+
+==================================================
+PERFORMANCE COMPARISON
+==================================================
+
+Sequential_Execution_1_Worker:
+  Time: 95.14s
+
+Sequential_Execution_4_Workers:
+  Time: 72.08s
+  Speedup: 32.0% faster than sequential
+
+Optimized_Execution_4_Workers:
+  Time: 52.48s
+  Speedup: 81.3% faster than sequential
+
+Parallel_Execution_Unlimited_Workers:
+  Time: 52.04s
+  Speedup: 82.8% faster than sequential
+
+Detailed results saved to: logs/demo_results.json
+
+==================================================
+KEY INSIGHTS
+==================================================
+
+1. Sequential execution processes tasks in order without considering
+   dependencies, leading to delayed critical path execution.
+
+2. Optimized execution with critical path prioritization ensures
+   the longest chain of tasks starts as early as possible.
+
+3. With 4 workers, we achieve near-optimal performance despite
+   limited resources by intelligent task prioritization.
+
+4. Unlimited concurrency achieves theoretical minimum time
+   (critical path length) when API rate limits aren't a factor.
+```
