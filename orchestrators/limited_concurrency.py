@@ -9,7 +9,12 @@ class ParallelExecutor(WorkflowExecutor):
     def __init__(self, dag: DAG, num_workers: int = 4):
         super().__init__(dag, num_workers)
         self.worker_queues = [asyncio.Queue() for _ in range(num_workers)]
-        self.ready_queue = []  # Priority queue (min-heap, so negate priorities)
+        # Priority queue of ready tasks (min-heap using negative priority for
+        # max-heap behaviour)
+        self.ready_queue = []
+        # Track which tasks have been dispatched to avoid scheduling them twice
+        self.dispatched_tasks: set[str] = set()
+        self.queued_tasks: set[str] = set()
         
     def calculate_priorities(self):
         """Calculate critical path priorities for all tasks"""
@@ -48,6 +53,7 @@ class ParallelExecutor(WorkflowExecutor):
             if not task.predecessors:
                 # Use negative priority for max-heap behavior
                 heapq.heappush(self.ready_queue, (-priorities[task_id], task_id))
+                self.queued_tasks.add(task_id)
         
         active_workers = set()
         
@@ -55,17 +61,21 @@ class ParallelExecutor(WorkflowExecutor):
             # Check for newly ready tasks
             newly_ready = []
             for task_id in self.dag.get_ready_tasks(self.completed_tasks):
-                if task_id not in self.completed_tasks and \
-                   not any((p, task_id) in self.ready_queue for p, _ in self.ready_queue):
+                if (task_id not in self.completed_tasks and
+                        task_id not in self.dispatched_tasks and
+                        task_id not in self.queued_tasks):
                     newly_ready.append(task_id)
             
             for task_id in newly_ready:
                 heapq.heappush(self.ready_queue, (-priorities[task_id], task_id))
+                self.queued_tasks.add(task_id)
             
             # Assign tasks to free workers
             for worker_id in range(self.num_workers):
                 if worker_id not in active_workers and self.ready_queue:
                     _, task_id = heapq.heappop(self.ready_queue)
+                    self.queued_tasks.remove(task_id)
+                    self.dispatched_tasks.add(task_id)
                     await self.worker_queues[worker_id].put(task_id)
                     active_workers.add(worker_id)
             

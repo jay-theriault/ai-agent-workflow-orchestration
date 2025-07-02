@@ -59,18 +59,18 @@ def create_example_dag() -> DAG:
     # Create all tasks
     # Short tasks
     for i in range(1, 5):
-        tasks[f'S{i}'] = Task(f'S{i}', duration=0.2)
+        tasks[f'S{i}'] = Task(f'S{i}', duration=1.0)
     
     # Medium tasks
     for i in range(1, 9):
-        tasks[f'M{i}'] = Task(f'M{i}', duration=2)
+        tasks[f'M{i}'] = Task(f'M{i}', duration=5.0)
     
     # Gate and critical path
-    tasks['Gate'] = Task('Gate', duration=0.5)
-    tasks['C1'] = Task('C1', duration=5)
-    tasks['C2'] = Task('C2', duration=4)
-    tasks['C3'] = Task('C3', duration=5)
-    tasks['End'] = Task('End', duration=2)
+    tasks['Gate'] = Task('Gate', duration=1.0)
+    tasks['C1'] = Task('C1', duration=20.0)
+    tasks['C2'] = Task('C2', duration=15.0)
+    tasks['C3'] = Task('C3', duration=10.0)
+    tasks['End'] = Task('End', duration=5.0)
     
     # Set up dependencies
     # Short tasks depend on nothing, Gate depends on all short tasks

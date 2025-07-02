@@ -1,528 +1,528 @@
 {
   "execution_log": [
     {
-      "timestamp": 1751422118.188248,
+      "timestamp": 1751423217.0204184,
       "event_type": "task_start",
       "task_id": "M1",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422118.188248,
+      "timestamp": 1751423217.0204184,
       "event_type": "task_start",
       "task_id": "M2",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422118.188248,
+      "timestamp": 1751423217.0204184,
       "event_type": "task_start",
       "task_id": "M3",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422118.188248,
+      "timestamp": 1751423217.0204184,
       "event_type": "task_start",
       "task_id": "M4",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_complete",
       "task_id": "M1",
       "worker_id": 0,
-      "duration": 2.0113306045532227
+      "duration": 5.0096516609191895
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_start",
       "task_id": "M5",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_complete",
       "task_id": "M3",
       "worker_id": 2,
-      "duration": 2.0113306045532227
+      "duration": 5.0096516609191895
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_start",
       "task_id": "M6",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_complete",
       "task_id": "M2",
       "worker_id": 1,
-      "duration": 2.0113306045532227
+      "duration": 5.0096516609191895
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_start",
       "task_id": "M7",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_complete",
       "task_id": "M4",
       "worker_id": 3,
-      "duration": 2.0113306045532227
+      "duration": 5.0096516609191895
     },
     {
-      "timestamp": 1751422120.1995785,
+      "timestamp": 1751423222.03007,
       "event_type": "task_start",
       "task_id": "M8",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_complete",
       "task_id": "M5",
       "worker_id": 0,
-      "duration": 2.0029990673065186
+      "duration": 5.002581596374512
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_start",
       "task_id": "S1",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_complete",
       "task_id": "M7",
       "worker_id": 1,
-      "duration": 2.0029990673065186
+      "duration": 5.002581596374512
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_start",
       "task_id": "S2",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_complete",
       "task_id": "M6",
       "worker_id": 2,
-      "duration": 2.0029990673065186
+      "duration": 5.002581596374512
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_start",
       "task_id": "S3",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_complete",
       "task_id": "M8",
       "worker_id": 3,
-      "duration": 2.0029990673065186
+      "duration": 5.002581596374512
     },
     {
-      "timestamp": 1751422122.2025776,
+      "timestamp": 1751423227.0326517,
       "event_type": "task_start",
       "task_id": "S4",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_complete",
       "task_id": "S1",
       "worker_id": 0,
-      "duration": 0.20398187637329102
+      "duration": 1.014998435974121
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_complete",
       "task_id": "S3",
       "worker_id": 2,
-      "duration": 0.20398187637329102
+      "duration": 1.014998435974121
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_complete",
       "task_id": "S2",
       "worker_id": 1,
-      "duration": 0.20398187637329102
+      "duration": 1.014998435974121
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_complete",
       "task_id": "S4",
       "worker_id": 3,
-      "duration": 0.20398187637329102
+      "duration": 1.014998435974121
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_start",
       "task_id": "Gate",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_start",
       "task_id": "Gate",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_start",
       "task_id": "Gate",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422122.4065595,
+      "timestamp": 1751423228.04765,
       "event_type": "task_start",
       "task_id": "Gate",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_complete",
       "task_id": "Gate",
       "worker_id": 0,
-      "duration": 0.503777027130127
+      "duration": 1.011974811553955
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_complete",
       "task_id": "Gate",
       "worker_id": 2,
-      "duration": 0.503777027130127
+      "duration": 1.011974811553955
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_complete",
       "task_id": "Gate",
       "worker_id": 1,
-      "duration": 0.503777027130127
+      "duration": 1.011974811553955
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_complete",
       "task_id": "Gate",
       "worker_id": 3,
-      "duration": 0.503777027130127
+      "duration": 1.011974811553955
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_start",
       "task_id": "C1",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_start",
       "task_id": "C1",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_start",
       "task_id": "C1",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422122.9103365,
+      "timestamp": 1751423229.059625,
       "event_type": "task_start",
       "task_id": "C1",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_complete",
       "task_id": "C1",
       "worker_id": 0,
-      "duration": 5.014396905899048
+      "duration": 20.00939393043518
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_complete",
       "task_id": "C1",
       "worker_id": 2,
-      "duration": 5.014396905899048
+      "duration": 20.00939393043518
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_complete",
       "task_id": "C1",
       "worker_id": 1,
-      "duration": 5.014396905899048
+      "duration": 20.00939393043518
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_complete",
       "task_id": "C1",
       "worker_id": 3,
-      "duration": 5.014396905899048
+      "duration": 20.00939393043518
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_start",
       "task_id": "C2",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_start",
       "task_id": "C2",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_start",
       "task_id": "C2",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422127.9247334,
+      "timestamp": 1751423249.0690188,
       "event_type": "task_start",
       "task_id": "C2",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_complete",
       "task_id": "C2",
       "worker_id": 0,
-      "duration": 4.01026725769043
+      "duration": 15.006133556365967
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_complete",
       "task_id": "C2",
       "worker_id": 2,
-      "duration": 4.01026725769043
+      "duration": 15.006133556365967
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_complete",
       "task_id": "C2",
       "worker_id": 1,
-      "duration": 4.01026725769043
+      "duration": 15.006133556365967
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_complete",
       "task_id": "C2",
       "worker_id": 3,
-      "duration": 4.01026725769043
+      "duration": 15.006133556365967
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_start",
       "task_id": "C3",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_start",
       "task_id": "C3",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_start",
       "task_id": "C3",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422131.9350007,
+      "timestamp": 1751423264.0751524,
       "event_type": "task_start",
       "task_id": "C3",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_complete",
       "task_id": "C3",
       "worker_id": 0,
-      "duration": 5.008194446563721
+      "duration": 10.001815557479858
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_complete",
       "task_id": "C3",
       "worker_id": 2,
-      "duration": 5.008194446563721
+      "duration": 10.001815557479858
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 2
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_complete",
       "task_id": "C3",
       "worker_id": 1,
-      "duration": 5.008194446563721
+      "duration": 10.001815557479858
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_complete",
       "task_id": "C3",
       "worker_id": 3,
-      "duration": 5.008194446563721
+      "duration": 10.001815557479858
     },
     {
-      "timestamp": 1751422136.943195,
+      "timestamp": 1751423274.076968,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422138.9494789,
+      "timestamp": 1751423279.0855703,
       "event_type": "task_complete",
       "task_id": "End",
       "worker_id": 0,
-      "duration": 2.006283760070801
+      "duration": 5.0086023807525635
     },
     {
-      "timestamp": 1751422138.9494789,
+      "timestamp": 1751423279.0855703,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 0
     },
     {
-      "timestamp": 1751422138.9494789,
-      "event_type": "task_complete",
-      "task_id": "End",
-      "worker_id": 1,
-      "duration": 0.0
-    },
-    {
-      "timestamp": 1751422138.9494789,
-      "event_type": "task_start",
-      "task_id": "End",
-      "worker_id": 1
-    },
-    {
-      "timestamp": 1751422138.9494789,
-      "event_type": "task_complete",
-      "task_id": "End",
-      "worker_id": 2,
-      "duration": 0.0
-    },
-    {
-      "timestamp": 1751422138.9494789,
-      "event_type": "task_start",
-      "task_id": "End",
-      "worker_id": 2
-    },
-    {
-      "timestamp": 1751422138.9494789,
-      "event_type": "task_complete",
-      "task_id": "End",
-      "worker_id": 3,
-      "duration": 0.0
-    },
-    {
-      "timestamp": 1751422138.9494789,
-      "event_type": "task_start",
-      "task_id": "End",
-      "worker_id": 3
-    },
-    {
-      "timestamp": 1751422140.9508762,
-      "event_type": "task_complete",
-      "task_id": "End",
-      "worker_id": 0,
-      "duration": 2.0013973712921143
-    },
-    {
-      "timestamp": 1751422140.9508762,
-      "event_type": "task_start",
-      "task_id": "End",
-      "worker_id": 0
-    },
-    {
-      "timestamp": 1751422140.9508762,
-      "event_type": "task_complete",
-      "task_id": "End",
-      "worker_id": 2,
-      "duration": 0.0
-    },
-    {
-      "timestamp": 1751422140.9508762,
-      "event_type": "task_start",
-      "task_id": "End",
-      "worker_id": 2
-    },
-    {
-      "timestamp": 1751422140.9508762,
+      "timestamp": 1751423279.0855703,
       "event_type": "task_complete",
       "task_id": "End",
       "worker_id": 1,
       "duration": 0.0
     },
     {
-      "timestamp": 1751422140.9508762,
+      "timestamp": 1751423279.0855703,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 1
     },
     {
-      "timestamp": 1751422140.9508762,
+      "timestamp": 1751423279.0855703,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": 2,
+      "duration": 0.0
+    },
+    {
+      "timestamp": 1751423279.0855703,
+      "event_type": "task_start",
+      "task_id": "End",
+      "worker_id": 2
+    },
+    {
+      "timestamp": 1751423279.0855703,
       "event_type": "task_complete",
       "task_id": "End",
       "worker_id": 3,
       "duration": 0.0
     },
     {
-      "timestamp": 1751422140.9508762,
+      "timestamp": 1751423279.0855703,
       "event_type": "task_start",
       "task_id": "End",
       "worker_id": 3
     },
     {
-      "timestamp": 1751422142.9573207,
+      "timestamp": 1751423284.0978773,
       "event_type": "task_complete",
       "task_id": "End",
       "worker_id": 0,
-      "duration": 2.0064444541931152
+      "duration": 5.0123069286346436
     },
     {
-      "timestamp": 1751422142.9573207,
-      "event_type": "task_complete",
+      "timestamp": 1751423284.0978773,
+      "event_type": "task_start",
       "task_id": "End",
-      "worker_id": 1,
-      "duration": 2.0064444541931152
+      "worker_id": 0
     },
     {
-      "timestamp": 1751422142.9573207,
+      "timestamp": 1751423284.0978773,
       "event_type": "task_complete",
       "task_id": "End",
       "worker_id": 2,
-      "duration": 2.0064444541931152
+      "duration": 0.0
     },
     {
-      "timestamp": 1751422142.9573207,
+      "timestamp": 1751423284.0978773,
+      "event_type": "task_start",
+      "task_id": "End",
+      "worker_id": 2
+    },
+    {
+      "timestamp": 1751423284.0978773,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": 1,
+      "duration": 0.0
+    },
+    {
+      "timestamp": 1751423284.0978773,
+      "event_type": "task_start",
+      "task_id": "End",
+      "worker_id": 1
+    },
+    {
+      "timestamp": 1751423284.0978773,
       "event_type": "task_complete",
       "task_id": "End",
       "worker_id": 3,
-      "duration": 2.0064444541931152
+      "duration": 0.0
+    },
+    {
+      "timestamp": 1751423284.0978773,
+      "event_type": "task_start",
+      "task_id": "End",
+      "worker_id": 3
+    },
+    {
+      "timestamp": 1751423289.1050014,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": 0,
+      "duration": 5.007124185562134
+    },
+    {
+      "timestamp": 1751423289.1050014,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": 1,
+      "duration": 5.007124185562134
+    },
+    {
+      "timestamp": 1751423289.1050014,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": 2,
+      "duration": 5.007124185562134
+    },
+    {
+      "timestamp": 1751423289.1050014,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": 3,
+      "duration": 5.007124185562134
     }
   ],
   "stats": {
-    "total_time": 24.769072771072388,
+    "total_time": 72.08458304405212,
     "completed_tasks": 17,
     "critical_path": [
       "S1",
@@ -532,80 +532,80 @@
       "C3",
       "End"
     ],
-    "critical_path_length": 16.7,
+    "critical_path_length": 52.0,
     "worker_0_utilization": 1.0,
-    "worker_1_utilization": 0.8381981768795377,
-    "worker_2_utilization": 0.8381981768795377,
-    "worker_3_utilization": 0.8381981768795377
+    "worker_1_utilization": 0.8609840150804055,
+    "worker_2_utilization": 0.8609840150804055,
+    "worker_3_utilization": 0.8609840150804055
   },
   "task_durations": {
     "S1": {
-      "expected": 0.2,
-      "actual": 0.20398187637329102
+      "expected": 1.0,
+      "actual": 1.014998435974121
     },
     "S2": {
-      "expected": 0.2,
-      "actual": 0.20398187637329102
+      "expected": 1.0,
+      "actual": 1.014998435974121
     },
     "S3": {
-      "expected": 0.2,
-      "actual": 0.20398187637329102
+      "expected": 1.0,
+      "actual": 1.014998435974121
     },
     "S4": {
-      "expected": 0.2,
-      "actual": 0.20398187637329102
+      "expected": 1.0,
+      "actual": 1.014998435974121
     },
     "M1": {
-      "expected": 2,
-      "actual": 2.0113306045532227
+      "expected": 5.0,
+      "actual": 5.0096516609191895
     },
     "M2": {
-      "expected": 2,
-      "actual": 2.0113306045532227
+      "expected": 5.0,
+      "actual": 5.0096516609191895
     },
     "M3": {
-      "expected": 2,
-      "actual": 2.0113306045532227
+      "expected": 5.0,
+      "actual": 5.0096516609191895
     },
     "M4": {
-      "expected": 2,
-      "actual": 2.0113306045532227
+      "expected": 5.0,
+      "actual": 5.0096516609191895
     },
     "M5": {
-      "expected": 2,
-      "actual": 2.0029990673065186
+      "expected": 5.0,
+      "actual": 5.002581596374512
     },
     "M6": {
-      "expected": 2,
-      "actual": 2.0029990673065186
+      "expected": 5.0,
+      "actual": 5.002581596374512
     },
     "M7": {
-      "expected": 2,
-      "actual": 2.0029990673065186
+      "expected": 5.0,
+      "actual": 5.002581596374512
     },
     "M8": {
-      "expected": 2,
-      "actual": 2.0029990673065186
+      "expected": 5.0,
+      "actual": 5.002581596374512
     },
     "Gate": {
-      "expected": 0.5,
-      "actual": 0.503777027130127
+      "expected": 1.0,
+      "actual": 1.011974811553955
     },
     "C1": {
-      "expected": 5,
-      "actual": 5.014396905899048
+      "expected": 20.0,
+      "actual": 20.00939393043518
     },
     "C2": {
-      "expected": 4,
-      "actual": 4.01026725769043
+      "expected": 15.0,
+      "actual": 15.006133556365967
     },
     "C3": {
-      "expected": 5,
-      "actual": 5.008194446563721
+      "expected": 10.0,
+      "actual": 10.001815557479858
     },
     "End": {
-      "expected": 2,
-      "actual": 2.0064444541931152
+      "expected": 5.0,
+      "actual": 5.007124185562134
     }
   }
 }

@@ -2,31 +2,31 @@
   "dag_info": {
     "total_tasks": 17,
     "task_durations": {
-      "S1": 0.2,
-      "S2": 0.2,
-      "S3": 0.2,
-      "S4": 0.2,
-      "M1": 2,
-      "M2": 2,
-      "M3": 2,
-      "M4": 2,
-      "M5": 2,
-      "M6": 2,
-      "M7": 2,
-      "M8": 2,
-      "Gate": 0.5,
-      "C1": 5,
-      "C2": 4,
-      "C3": 5,
-      "End": 2
+      "S1": 1.0,
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0,
+      "M1": 5.0,
+      "M2": 5.0,
+      "M3": 5.0,
+      "M4": 5.0,
+      "M5": 5.0,
+      "M6": 5.0,
+      "M7": 5.0,
+      "M8": 5.0,
+      "Gate": 1.0,
+      "C1": 20.0,
+      "C2": 15.0,
+      "C3": 10.0,
+      "End": 5.0
     }
   },
   "results": [
     {
       "name": "Sequential_Execution_1_Worker",
-      "execution_time": 33.447694540023804,
+      "execution_time": 95.1408178806305,
       "stats": {
-        "total_time": 33.447694540023804,
+        "total_time": 95.1408178806305,
         "completed_tasks": 17,
         "critical_path": [
           "S1",
@@ -36,16 +36,16 @@
           "C3",
           "End"
         ],
-        "critical_path_length": 16.7,
+        "critical_path_length": 52.0,
         "worker_0_utilization": 1.0
       },
       "completed_tasks": 17
     },
     {
       "name": "Sequential_Execution_4_Workers",
-      "execution_time": 24.770465850830078,
+      "execution_time": 72.08458304405212,
       "stats": {
-        "total_time": 24.769072771072388,
+        "total_time": 72.08458304405212,
         "completed_tasks": 17,
         "critical_path": [
           "S1",
@@ -55,19 +55,19 @@
           "C3",
           "End"
         ],
-        "critical_path_length": 16.7,
+        "critical_path_length": 52.0,
         "worker_0_utilization": 1.0,
-        "worker_1_utilization": 0.8381981768795377,
-        "worker_2_utilization": 0.8381981768795377,
-        "worker_3_utilization": 0.8381981768795377
+        "worker_1_utilization": 0.8609840150804055,
+        "worker_2_utilization": 0.8609840150804055,
+        "worker_3_utilization": 0.8609840150804055
       },
       "completed_tasks": 17
     },
     {
       "name": "Optimized_Execution_4_Workers",
-      "execution_time": 33.54230237007141,
+      "execution_time": 52.48258113861084,
       "stats": {
-        "total_time": 33.541306018829346,
+        "total_time": 52.48148059844971,
         "completed_tasks": 17,
         "critical_path": [
           "S1",
@@ -77,19 +77,19 @@
           "C3",
           "End"
         ],
-        "critical_path_length": 16.7,
-        "worker_0_utilization": 0.811605484448755,
-        "worker_1_utilization": 0.5997234381088402,
-        "worker_2_utilization": 0.5809580107207983,
-        "worker_3_utilization": 0.7703872183502313
+        "critical_path_length": 52.0,
+        "worker_0_utilization": 0.9919196780654972,
+        "worker_1_utilization": 0.30571525999948285,
+        "worker_2_utilization": 0.30571525999948285,
+        "worker_3_utilization": 0.2102292231838591
       },
       "completed_tasks": 17
     },
     {
       "name": "Parallel_Execution_Unlimited_Workers",
-      "execution_time": 16.772279262542725,
+      "execution_time": 52.04445815086365,
       "stats": {
-        "total_time": 16.77128028869629,
+        "total_time": 52.04445815086365,
         "completed_tasks": 17,
         "critical_path": [
           "S1",
@@ -99,7 +99,7 @@
           "C3",
           "End"
         ],
-        "critical_path_length": 16.7
+        "critical_path_length": 52.0
       },
       "completed_tasks": 17
     }
