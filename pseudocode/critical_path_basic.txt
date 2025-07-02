@@ -1,0 +1,72 @@
+// Optimal Task Scheduling Algorithm for DAG with Parallel Processors
+// Uses priority-based list scheduling with critical path heuristic
+
+ALGORITHM OptimalTaskScheduling(DAG, task_durations, num_processors):
+    
+    // Step 1: Preprocessing - Calculate priorities using critical path
+    FUNCTION CalculateCriticalPath(task):
+        if task.critical_path_length is not null:
+            return task.critical_path_length
+        
+        max_successor_path = 0
+        for each successor in task.successors:
+            successor_path = CalculateCriticalPath(successor)
+            max_successor_path = max(max_successor_path, successor_path)
+        
+        task.critical_path_length = task.duration + max_successor_path
+        return task.critical_path_length
+    
+    // Calculate priorities for all tasks
+    for each task in DAG:
+        task.priority = CalculateCriticalPath(task)
+        task.remaining_dependencies = count(task.predecessors)
+    
+    // Step 2: Initialize data structures
+    ready_queue = PriorityQueue()  // Max-heap ordered by priority
+    processors = Array(num_processors)  // Track what each processor is doing
+    current_time = 0
+    completed_tasks = Set()
+    
+    // Add tasks with no dependencies to ready queue
+    for each task in DAG:
+        if task.remaining_dependencies == 0:
+            ready_queue.add(task)
+    
+    // Step 3: Main scheduling loop
+    while not all tasks completed:
+        
+        // Step 3a: Check for completed tasks and free processors
+        for i = 0 to num_processors - 1:
+            if processors[i] is not null and processors[i].finish_time <= current_time:
+                completed_task = processors[i].task
+                completed_tasks.add(completed_task)
+                processors[i] = null
+                
+                // Update dependencies for successor tasks
+                for each successor in completed_task.successors:
+                    successor.remaining_dependencies -= 1
+                    if successor.remaining_dependencies == 0:
+                        ready_queue.add(successor)
+        
+        // Step 3b: Assign ready tasks to free processors
+        for i = 0 to num_processors - 1:
+            if processors[i] is null and not ready_queue.empty():
+                task = ready_queue.extractMax()  // Get highest priority task
+                processors[i] = {
+                    task: task,
+                    start_time: current_time,
+                    finish_time: current_time + task.duration
+                }
+        
+        // Step 3c: Advance time to next event
+        next_event_time = infinity
+        for i = 0 to num_processors - 1:
+            if processors[i] is not null:
+                next_event_time = min(next_event_time, processors[i].finish_time)
+        
+        if next_event_time == infinity:
+            break  // All tasks completed
+        
+        current_time = next_event_time
+    
+    return current_time  // Total completion time (makespan)

@@ -1,0 +1,102 @@
+// Alternative: Enhanced algorithm with load balancing
+ALGORITHM EnhancedTaskScheduling(DAG, task_durations, num_processors):
+    
+    // Calculate both critical path and bottom level for better prioritization
+    FUNCTION CalculateBottomLevel(task):
+        if task.bottom_level is not null:
+            return task.bottom_level
+        
+        max_successor_path = 0
+        for each successor in task.successors:
+            successor_path = CalculateBottomLevel(successor)
+            max_successor_path = max(max_successor_path, successor_path)
+        
+        task.bottom_level = task.duration + max_successor_path
+        return task.bottom_level
+    
+    FUNCTION CalculateTopLevel(task):
+        if task.top_level is not null:
+            return task.top_level
+        
+        max_predecessor_path = 0
+        for each predecessor in task.predecessors:
+            predecessor_path = CalculateTopLevel(predecessor)
+            max_predecessor_path = max(max_predecessor_path, predecessor_path + predecessor.duration)
+        
+        task.top_level = max_predecessor_path
+        return task.top_level
+    
+    // Calculate priorities
+    for each task in DAG:
+        task.bottom_level = CalculateBottomLevel(task)
+        task.top_level = CalculateTopLevel(task)
+        task.priority = task.bottom_level  // Primary: critical path length
+        task.remaining_dependencies = count(task.predecessors)
+    
+    // Initialize
+    ready_queue = PriorityQueue()
+    processors = Array(num_processors)
+    processor_available_time = Array(num_processors, 0)
+    current_time = 0
+    
+    // Add initial ready tasks
+    for each task in DAG:
+        if task.remaining_dependencies == 0:
+            ready_queue.add(task)
+    
+    // Main scheduling loop
+    while not ready_queue.empty() or any processor busy:
+        
+        // Process completed tasks
+        for i = 0 to num_processors - 1:
+            if processors[i] is not null and processor_available_time[i] <= current_time:
+                completed_task = processors[i]
+                processors[i] = null
+                
+                // Update successor dependencies
+                for each successor in completed_task.successors:
+                    successor.remaining_dependencies -= 1
+                    if successor.remaining_dependencies == 0:
+                        ready_queue.add(successor)
+        
+        // Assign tasks to processors
+        while not ready_queue.empty():
+            // Find earliest available processor
+            earliest_processor = 0
+            for i = 1 to num_processors - 1:
+                if processor_available_time[i] < processor_available_time[earliest_processor]:
+                    earliest_processor = i
+            
+            if processor_available_time[earliest_processor] > current_time:
+                break  // No processor available yet
+            
+            task = ready_queue.extractMax()
+            processors[earliest_processor] = task
+            processor_available_time[earliest_processor] = 
+                max(current_time, processor_available_time[earliest_processor]) + task.duration
+        
+        // Advance time to next event
+        next_event_time = infinity
+        for i = 0 to num_processors - 1:
+            if processors[i] is not null:
+                next_event_time = min(next_event_time, processor_available_time[i])
+        
+        current_time = next_event_time
+    
+    // Return makespan
+    makespan = 0
+    for i = 0 to num_processors - 1:
+        makespan = max(makespan, processor_available_time[i])
+    
+    return makespan
+
+// Utility function to extract schedule details
+FUNCTION GetDetailedSchedule(DAG, task_durations, num_processors):
+    schedule = []
+    // Run the algorithm but also track assignment details
+    // ... (similar to above but record task assignments)
+    return schedule  // List of (task, processor, start_time, end_time)
+
+// Time Complexity: O(V + E + V²) where V = tasks, E = edges
+// Space Complexity: O(V + E)
+// Approximation: This is a heuristic that often performs well in practice
