@@ -4,6 +4,16 @@ import asyncio
 # Example naive sequential executor for comparison
 class SequentialExecutorSingleWorker(WorkflowExecutor):
     """Executes tasks sequentially (BFS order)"""
+
+    def __init__(self, dag: DAG, **kwargs):
+        """Create a new executor.
+
+        Args:
+            dag: The workflow DAG to execute.
+            num_workers: Maximum number of concurrent worker coroutines.
+        """
+        # Initialize parent class (sets ``self.dag`` and bookkeeping structures).
+        super().__init__(dag, num_workers=1)
     
     async def run(self):
         """Run all tasks sequentially"""

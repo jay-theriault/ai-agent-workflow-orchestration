@@ -13,7 +13,7 @@ from mock_dag import create_example_dag
 
 from orchestrators.limited_concurrency import ParallelExecutor
 from orchestrators.unlimited_concurrency import UnlimitedConcurrencyExecutor
-from orchestrators.sequential_execution import SequentialExecutorMultipleWorkers
+from orchestrators.sequential_execution import SequentialExecutorSingleWorker, SequentialExecutorMultipleWorkers
 
 def print_dag_structure(dag):
     """Print the DAG structure for visualization"""
@@ -97,7 +97,7 @@ async def main():
     # Test 1a+1b: Sequential execution (simulating BFS) Single and Multiple Workers
     dag1a = create_example_dag()
     result1a = await run_single_test(
-        SequentialExecutorMultipleWorkers, 
+        SequentialExecutorSingleWorker, 
         dag1a,
         num_workers=1,
         name="Sequential_Execution_1_Worker"  # Simulating BFS with single worker

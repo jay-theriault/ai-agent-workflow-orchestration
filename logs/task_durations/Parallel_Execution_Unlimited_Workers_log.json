@@ -1,0 +1,308 @@
+{
+  "execution_log": [
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "S1",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "S2",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "S3",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "S4",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M1",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M2",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M3",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M4",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M5",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M6",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M7",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.5063767,
+      "event_type": "task_start",
+      "task_id": "M8",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422176.7218,
+      "event_type": "task_complete",
+      "task_id": "S1",
+      "worker_id": null,
+      "duration": 0.2154233455657959
+    },
+    {
+      "timestamp": 1751422176.7218,
+      "event_type": "task_complete",
+      "task_id": "S3",
+      "worker_id": null,
+      "duration": 0.2154233455657959
+    },
+    {
+      "timestamp": 1751422176.7218,
+      "event_type": "task_complete",
+      "task_id": "S2",
+      "worker_id": null,
+      "duration": 0.2154233455657959
+    },
+    {
+      "timestamp": 1751422176.7218,
+      "event_type": "task_complete",
+      "task_id": "S4",
+      "worker_id": null,
+      "duration": 0.2154233455657959
+    },
+    {
+      "timestamp": 1751422176.7218,
+      "event_type": "task_start",
+      "task_id": "Gate",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422177.234777,
+      "event_type": "task_complete",
+      "task_id": "Gate",
+      "worker_id": null,
+      "duration": 0.512976884841919
+    },
+    {
+      "timestamp": 1751422177.234777,
+      "event_type": "task_start",
+      "task_id": "C1",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M8",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M7",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M5",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M2",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M4",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M3",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M1",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422178.513089,
+      "event_type": "task_complete",
+      "task_id": "M6",
+      "worker_id": null,
+      "duration": 2.0067121982574463
+    },
+    {
+      "timestamp": 1751422182.2389953,
+      "event_type": "task_complete",
+      "task_id": "C1",
+      "worker_id": null,
+      "duration": 5.004218339920044
+    },
+    {
+      "timestamp": 1751422182.2389953,
+      "event_type": "task_start",
+      "task_id": "C2",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422186.2539277,
+      "event_type": "task_complete",
+      "task_id": "C2",
+      "worker_id": null,
+      "duration": 4.01493239402771
+    },
+    {
+      "timestamp": 1751422186.2539277,
+      "event_type": "task_start",
+      "task_id": "C3",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422191.2695663,
+      "event_type": "task_complete",
+      "task_id": "C3",
+      "worker_id": null,
+      "duration": 5.015638589859009
+    },
+    {
+      "timestamp": 1751422191.2695663,
+      "event_type": "task_start",
+      "task_id": "End",
+      "worker_id": null
+    },
+    {
+      "timestamp": 1751422193.277657,
+      "event_type": "task_complete",
+      "task_id": "End",
+      "worker_id": null,
+      "duration": 2.0080907344818115
+    }
+  ],
+  "stats": {
+    "total_time": 16.77128028869629,
+    "completed_tasks": 17,
+    "critical_path": [
+      "S1",
+      "Gate",
+      "C1",
+      "C2",
+      "C3",
+      "End"
+    ],
+    "critical_path_length": 16.7
+  },
+  "task_durations": {
+    "S1": {
+      "expected": 0.2,
+      "actual": 0.2154233455657959
+    },
+    "S2": {
+      "expected": 0.2,
+      "actual": 0.2154233455657959
+    },
+    "S3": {
+      "expected": 0.2,
+      "actual": 0.2154233455657959
+    },
+    "S4": {
+      "expected": 0.2,
+      "actual": 0.2154233455657959
+    },
+    "M1": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M2": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M3": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M4": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M5": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M6": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M7": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "M8": {
+      "expected": 2,
+      "actual": 2.0067121982574463
+    },
+    "Gate": {
+      "expected": 0.5,
+      "actual": 0.512976884841919
+    },
+    "C1": {
+      "expected": 5,
+      "actual": 5.004218339920044
+    },
+    "C2": {
+      "expected": 4,
+      "actual": 4.01493239402771
+    },
+    "C3": {
+      "expected": 5,
+      "actual": 5.015638589859009
+    },
+    "End": {
+      "expected": 2,
+      "actual": 2.0080907344818115
+    }
+  }
+}
